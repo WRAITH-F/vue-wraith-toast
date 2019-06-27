@@ -1,65 +1,4 @@
-<template>
-	<div>
-		<button @click="AlertTips()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">alert弹窗</button>
-		
-		<button @click="confirmTips()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">confirm弹窗</button>
-		
-		<button @click="showPrompt()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">showPrompt弹窗</button>
-	</div>
-</template>
-
-<script>
-	import {PostbirdAlertBox} from '../wraithToast/wraithToast.js'
-	
-	export default {
-		components: {
-			
-		},
-		methods:{
-			AlertTips(){
-				PostbirdAlertBox.alert({
-				    title: '提示',
-				    content: '提示内容主体提示内容主体提示内容主体提示内容主体提示内容主体提示内容主体',
-				    okBtn: '好的',
-				    contentColor: 'red',
-					okBtnColor: "#0e90d2",
-				    onConfirm: function () {
-				        console.log("回调触发后隐藏提示框");
-				    }
-				});
-			},
-			confirmTips(){
-				PostbirdAlertBox.confirm({
-				    'title': '提示',
-				    'content': '离开本页面进行',
-				    'okBtn': '好的',
-				    'contentColor': 'red',
-				    'onConfirm': function () {
-				        console.log("OK - 回调触发后隐藏提示框");
-				    },
-				    'onCancel': function () {
-				        console.log("Cancel-回调触发后隐藏提示框");
-				    }
-				});
-			},
-			showPrompt(){
-				PostbirdAlertBox.prompt({
-				    'title': '请输入姓名',
-				    'okBtn': '提交',
-				    onConfirm: function (data) {
-				        console.log("输入框内容是：" + data);
-				    },
-				    onCancel: function (data) {
-				        console.log("输入框内容是：" + data);
-				    },
-				});
-			}
-		}
-	}
-</script>
-
-<style>
-	/**
+/**
 	 * PostbirdAlertBox.js
 	 * -    原生javascript弹框插件
 	 * Author:  Postbird - http://www.ptbird.cn
@@ -69,7 +8,7 @@
 	* {
 		margin: 0;
 		padding: 0;
-		box-sizing: border-box
+		box-sizing: border-box;
 	}
 	
 	.postbird-box-container {
@@ -85,11 +24,11 @@
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
-		user-select: none
+		user-select: none;
 	}
 	
 	.postbird-box-container.active {
-		display: block
+		display: block;
 	}
 	
 	.postbird-box-content {
@@ -123,17 +62,17 @@
 		opacity: .5;
 		font-size: 1.3em;
 		margin-top: -3px;
-		display: none
+		display: none;
 	}
 	
 	.postbird-box-close-btn:hover {
-		opacity: 1
+		opacity: 1;
 	}
 	
 	.postbird-box-text {
 		display: inline-block;
 		width: 100%;
-		padding: 0 10% 0.725rem;
+		padding: 1.5rem 10% 2rem;
 		text-align: center;
 		line-height: 1.625rem;
 		font-size: 1.075rem;
@@ -151,7 +90,7 @@
 		display: -webkit-flex;
 		justify-content: space-around;
 		border-top: solid 1px #f6f6f6;
-		align-items: flex-end
+		align-items: flex-end;
 	}
 	
 	.postbird-box-footer .btn-footer {
@@ -166,7 +105,7 @@
 		-webkit-transition: background-color .5s;
 		-o-transition: background-color .5s;
 		-moz-transition: background-color .5s;
-		outline: 0
+		outline: 0;
 	}
 	
 	.postbird-box-footer .btn-footer:hover {
@@ -174,13 +113,13 @@
 	}
 	
 	.postbird-box-footer .btn-block-footer {
-		width: 100%
+		width: 100%;
 	}
 	
 	.postbird-box-footer .btn-left-footer,
 	.postbird-box-footer .btn-right-footer {
 		position: relative;
-		width: 100%
+		width: 100%;
 	}
 	
 	.postbird-box-footer .btn-left-footer::after {
@@ -190,11 +129,11 @@
 		top: 0;
 		background-color: #f6f6f6;
 		height: 100%;
-		width: 1px
+		width: 1px;
 	}
 	
 	.postbird-box-footer .btn-footer-cancel {
-		color: #333
+		color: #333;
 	}
 	
 	.postbird-prompt-input {
@@ -205,4 +144,3 @@
 		outline: 0;
 		border: 1px solid #ebebeb;
 	}
-</style>
