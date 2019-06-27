@@ -12,35 +12,34 @@
 	.toast-wrap {
 		position: fixed;
 		left: 50%;
-		top: 50%;
+		top: 30%;
 		background: rgba(0, 0, 0, .8);
 		padding: 1.5rem 2rem 1.75rem;
 		border-radius: 0.125rem;
-		transform: translate(-50%, -50%);
+		margin-left: -100px;
 		color: white;
 		text-align: center;
-		max-width: 300px;
+		max-width: 200px;
 	}
 
 	.toast-wrap-img {
-		width: 4.25rem;
-		height: 4.25rem;
+		width: 3rem;
+		height: 3rem;
 		overflow: hidden;
-		margin: 0 auto 1rem;
+		margin: 0 auto 0.325rem;
 	}
 
 	.toast-wrap-text {
-		letter-spacing: 0.125rem;
 		text-align: center;
-		font-size: 1.075rem;
+		font-size: 0.9rem;
 	}
 
 	.fadein {
-		animation: animate_in 0.5s;
+		animation: animate_in 0.25s;
 	}
 
 	.fadeout {
-		animation: animate_out 0.5s;
+		animation: animate_out 0.25s;
 		opacity: 0;
 	}
 
@@ -48,21 +47,21 @@
 
 		/*@keyframes使一个div元素逐渐变化*/
 		0% {
-			opacity: 0;
+			transform: scale(0,0);
 		}
 
 		100% {
-			opacity: 1;
+			transform: scale(1,1);
 		}
 	}
 
 	@keyframes animate_out {
 		0% {
-			opacity: 1;
+			transform: scale(0,0);
 		}
 
 		100% {
-			opacity: 0;
+			transform: scale(1,1);
 		}
 	}
 </style>

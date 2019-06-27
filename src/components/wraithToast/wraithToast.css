@@ -20,7 +20,6 @@
 		left: 0;
 		z-index: 9999;
 		background-color: rgba(0, 0, 0, 0.4);
-		display: block;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
@@ -32,18 +31,29 @@
 	}
 	
 	.postbird-box-content {
-		display: inline-block;
-		width: 400px;
+		width: 320px;
 		max-width: 90%;
-		background-color: #fff;
+		background: rgba(256,256,256,1);
 		border: solid 1px #f6f6f6;
 		position: absolute;
-		top: 50%;
+		top: 24%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		margin-top: -100px;
-		border-radius: 4px;
+		margin-left: -160px;
+		border-radius: 0.325rem;
 		overflow: hidden;
+		animation: postbird-box-container_in .25s;
+	}
+	
+	@keyframes postbird-box-container_in {
+		/*@keyframes使一个div元素逐渐变化*/
+		0% 
+		{
+			transform: scale(0,0);
+		}
+	
+		100% {
+			transform: scale(1,1);
+		}
 	}
 	
 	.postbird-box-header {
@@ -94,7 +104,7 @@
 	}
 	
 	.postbird-box-footer .btn-footer {
-		line-height: 44px;
+		line-height: 2.5rem;
 		border: 0;
 		cursor: pointer;
 		background-color: #fff;
