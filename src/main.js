@@ -4,7 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import toastRegistry from './components/toast/toast' //注册一下toast弹窗组件
+
 Vue.config.productionTip = false
+
+Vue.use(toastRegistry)
 
 /* eslint-disable no-new */
 new Vue({

@@ -5,6 +5,8 @@
     <button @click="confirmTips()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">confirm弹窗</button>
     
     <button @click="showPrompt()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">showPrompt弹窗</button>
+	
+	<button @click="tipsShow()" style="padding: 8px 16px;border: 1px solid #e2e2e2;background: #0E90D2;color: white;">Tips弹窗</button>
   </div>
 </template>
 
@@ -54,6 +56,9 @@ export default {
 			        console.log("输入框内容是：" + data);
 			    },
 			});
+		},
+		tipsShow(){
+			this.$toast('请重新选择请重新选择请重新选择！',1500, 'warn')		//弹窗的使用方法  信息  事件  图标success fail warn
 		}
 	}
 }
