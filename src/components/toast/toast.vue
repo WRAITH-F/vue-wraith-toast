@@ -26,7 +26,7 @@
 		width: 3rem;
 		height: 3rem;
 		overflow: hidden;
-		margin: 0 auto 0.325rem;
+		margin: 0 auto 0.625rem;
 	}
 
 	.toast-wrap-text {
